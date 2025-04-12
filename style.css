@@ -1,0 +1,89 @@
+body {
+    background: #fce4ec;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.envelope {
+    position: relative;
+    width: 90vw;
+    max-width: 400px;
+    height: 200px;
+    background: #d7ccc8;
+    cursor: pointer;
+    transition: transform 1s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50% solid transparent;
+    border-right: 50% solid transparent;
+    border-bottom: 100px solid #a1887f;
+    z-index: 2;
+    transition: all 1s ease;
+}
+
+.letter {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(0);
+    transition: transform 1s ease;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+    transform-origin: top;
+}
+
+.envelope.open .letter {
+    transform: translateY(-100%);
+}
+
+.text {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #4e342e;
+    z-index: 3;
+}
+
+.content p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.firma {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: right;
+}
+
+/* RESPONSIVE AJUSTES EXTRA PARA CELULARES */
+@media (max-height: 500px) {
+    .letter {
+        height: 300px;
+    }
+}

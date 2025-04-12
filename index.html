@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carta de Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="envelope" onclick="abrirCarta()">
+        <div class="flap"></div>
+        <div class="letter">
+            <div class="content">
+                <h2>Mi niña presiosa</h2>
+                <p>
+                    Déjame ser el amor más bonito que has tenido, déjame amarte como nadie lo hizo, déjame entrar en tu vida como un torbellino, 
+                    y arrasarte el corazón de alegría y amor. Porque, tal vez no sea el mejor pintor, pero eres mi obra de arte favorita. 
+                    Tal vez no sea un astronauta, pero al verte, solo pensé en la luna. Eres igual que ella, en su mejor punto: llena de hermosura, 
+                    brillante... pero inalcanzable para muchos.
+                </p>
+                <p>
+                    Me enamoré de ti no por tu físico, sino por la forma en que eres, por tu forma de ser, que me enamora más y más. 
+                    Conocerte fue como escuchar una canción por primera vez y saber que sería mi favorita. 
+                </p>
+                <p>
+                    Si el mundo se pone en tu contra, estará en contra de los dos. Siempre te apoyaré, alegraré tus días 
+                    y cuidaré ese brillo en tus ojos.
+                </p>
+                <p>
+                    Eres mi tesoro más preciado. En ti llevas mi corazón.
+                </p>
+                <p class="firma">Con todo mi amor,<br>Tu niño hermoso </p>
+            </div>
+        </div>
+        <div class="text">Haz clic para abrir</div>
+    </div>
+
+    <script>
+        function abrirCarta() {
+            document.querySelector('.envelope').classList.add('open');
+        }
+    </script>
+</body>
+</html>
